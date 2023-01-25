@@ -1,0 +1,275 @@
+@import url('https://fonts.cdnfonts.com/css/inter');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0px 35px;
+    font-family: 'Inter', sans-serif;                   
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h3 {
+    color: hsl(36, 100%, 99%);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    color:  hsl(233, 8%, 79%);
+    font-size: 16px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    margin-left: 25px;
+    font-weight: 600;
+    color: hsl(236, 13%, 42%);
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: hsl(236, 13%, 42%);
+
+}
+
+a:active {
+    color: hsl(5, 85%, 63%);
+}
+
+button {
+    padding:15px 35px;
+    margin-top: 35px;
+    border-style: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    background-color: hsl(5, 85%, 63%);
+    color:  hsl(36, 100%, 99%);
+    font-size: 15px;
+}
+
+button:active { 
+    background-color: hsl(240, 100%, 5%);
+}
+
+.container {
+    margin: auto;
+    max-width: 1440px;
+}
+
+.img-wrapper {
+    width: 100%;
+    object-fit: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.navbar .container {
+    display: flex;
+    margin: 45px auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .container .img-close {
+    display: none;
+}
+
+.main .container {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 30px;
+}
+
+.main .container .item:nth-of-type(1) {
+    flex-basis: 75%;
+    /*background-color: blue;*/
+    align-self: flex-start;
+}
+
+.main .container .item:first-child h1 {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 1;
+    color: hsl(240, 100%, 5%);
+}
+
+.main .container .item:first-child .container {
+    width: 100%;
+    display: flex;
+}
+
+.main .container .item:first-child .container p {
+    color: hsl(236, 13%, 42%);
+    font-size: 16px;
+}
+
+.main .container .item:nth-of-type(2) {
+    flex-basis: 25%;
+    background-color: hsl(240, 100%, 5%);
+    align-self: stretch;
+    padding: 35px 25px;
+    margin-bottom: 15px;
+    /*align-self: flex-end;*/
+}
+
+.main .container .item .image #img-mobile{
+    display: none;
+}
+
+
+.main .container .item:last-child h1 {
+    color: hsl(35, 77%, 62%);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.main .container .item:last-child h3:active  {
+    color:  hsl(35, 77%, 62%);
+}
+
+.main .container .item:last-child .border {
+    background-color:  hsl(236, 13%, 42%);
+    height: 1px;
+    margin: 40px 0px;
+}
+
+.catalog .container {
+    display: flex;
+    margin: auto;
+}
+
+.catalog .item {
+    flex-basis: 33%;
+    display: flex;
+    grid-gap: 25px;
+    align-items: center;
+    margin: 40px 0px;
+    padding: 20px 0px;
+    justify-content: space-between;
+}
+
+.catalog .item .image {
+    flex-basis: 25%;
+    align-self: center;
+}
+
+.catalog .item .container{
+    flex-basis: 75%;
+    flex-direction: column;
+    margin-top: -1%;
+    margin-right: 25px;
+}
+
+.catalog .item .container h2{
+    color:  hsl(233, 8%, 79%);
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.catalog .item .container h3{
+    color:  hsl(240, 100%, 5%);
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.catalog .item .container h3:active {
+    color:  hsl(5, 85%, 63%);
+}
+
+.catalog .item .container p{
+    color:  hsl(236, 13%, 42%);
+    font-size: 16px;
+}
+
+.footer .attribution {
+    margin: 10px 45px;
+}
+
+
+@media only screen and (max-width:  1350px) {
+
+    .main .container {
+        flex-wrap: wrap;
+    }
+
+    .main .container .item:first-child {
+        flex-basis: 100%;
+    }
+
+    .main .container .item:last-child {
+        flex-basis: 100%;
+    }
+
+    .catalog .container {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .catalog .container .item {
+        flex-basis: 50%;
+        margin-top: 10px;
+        padding:0px;
+        grid-gap: 0;
+        justify-content: flex-start;
+    }
+
+    .catalog .container .item .image {
+        flex-basis: 45%;
+    }
+
+    .catalog .container .item .container {
+        margin: 15px 30px;
+        align-self: center;
+    }
+
+}
+
+@media only screen and (max-width:  888px) {
+
+    .catalog .container .item {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+
+
+    .navbar .container .img-close {
+        display: block;
+    }
+
+    .navbar .container ul {
+        display: none;
+    }
+
+    .main .container .item .image #img-desktop{
+        display: none;
+    }
+
+    .main .container .item .image #img-mobile{
+        display: block;
+    }
+
+    .catalog .container .item .image {
+        flex-basis: 45%;
+        align-self: center;
+    }
+
+    .catalog .container .item h2 {
+        font-size: 26px;
+    }
+
+}
